@@ -37,6 +37,11 @@ jobs:
     - Linting
     - Formatting
     steps:
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+        
     - name: Test workflow
       uses: snakemake/snakemake-github-action@v1.24.0
       with:
