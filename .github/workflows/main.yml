@@ -34,14 +34,9 @@ jobs:
   Testing:
     runs-on: ubuntu-latest
     needs: 
-      - Linting
-      - Formatting
+    - Linting
+    - Formatting
     steps:
-    - name: Set up Node.js
-      uses: actions/checkout@v2
-      with:
-        node-version: '16' # Specify Node.js version 16
-
     - name: Test workflow
       uses: snakemake/snakemake-github-action@v1.24.0
       with:
