@@ -3,7 +3,7 @@
 [![Snakemake](https://img.shields.io/badge/snakemake-≥6.3.0-brightgreen.svg)](https://snakemake.github.io)
 [![GitHub actions status](https://github.com/<owner>/<repo>/workflows/Tests/badge.svg?branch=main)](https://github.com/<owner>/<repo>/actions?query=branch%3Amain+workflow%3ATests)
 
-IN PROGRESS
+UNDER CONSTRUCTION
 
 A Snakemake pipeline for de novo hybrid assembly in barley from Oxford Nanopore and Illumina reads
 
