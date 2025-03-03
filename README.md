@@ -7,8 +7,10 @@ A Snakemake pipeline for de novo hybrid assembly and structural variant calling 
 
 #### Conda =< 24.11.2
 
+```
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
+```
 
 #### Snakemake =< 8.16.0
 
