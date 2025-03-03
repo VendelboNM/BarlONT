@@ -5,12 +5,12 @@ A Snakemake pipeline for de novo hybrid assembly and structural variant calling 
 ## Requirements
 
 
-### Conda =< 24.11.2
+#### Conda =< 24.11.2
 
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 
-### Snakemake =< 8.16.0
+#### Snakemake =< 8.16.0
 
 conda install -c bioconda -c conda-forge snakemake
 
@@ -20,7 +20,7 @@ conda install -c bioconda -c conda-forge snakemake
 
 ## Running on SLURM
 
-### Install executor plugin for slurm (https://snakemake.github.io/snakemake-plugin-catalog/plugins/executor/slurm.html)
+#### Install executor plugin for slurm (https://snakemake.github.io/snakemake-plugin-catalog/plugins/executor/slurm.html)
 
 pip install snakemake-executor-plugin-slurm
 
