@@ -2,8 +2,9 @@
 
 A Snakemake pipeline for de novo hybrid assembly and structural variant calling in barley using Oxford Nanopore and Illumina reads.
 
-## Software requirements
+BarlONT will generate a polished assembly, extensive QC reporting and both short- & long-read sequence guided structural variants. 
 
+## Software requirements
 
 #### Conda =< 24.11.2
 ```
@@ -41,21 +42,28 @@ BarlONT was developed using:
 &nbsp;&nbsp;&nbsp;&nbsp; Illumina 150 bp paired-end dataset (>120 Gigabase).
 <p>&nbsp;</p>
 
-## Getting started
-
-
-<p>&nbsp;</p>
-
 ### BarlONT directive structure
 
-Pipeline directory: snakemake/barlont/workflow
-Run directory: snakemake/barlont_run
+#### Pipeline directory: snakemake/barlont/workflow
+The pipeline directory contains the BarlONT snakemake pipeline such as rules, conda environments, scripts, etc. needed for running BarlONT. 
 
-The pipeline directory contains the BarlONT snakemake pipeline, rules, conda environments, scripts, etc. needed for running BarlONT. The run directory (just a folder within the same directive as the barlont folder), contains the run output (results, log, benchmark, etc. files) generated during a BarlONT run or multiple runs. This directive structure allows for multiple run directives to be generated and run using different run parameters or samples. 
+#### Run directory: snakemake/barlont_run
+The run directory (just a folder within the same directive as the barlont folder), contains the run output such as results, log and benchmark files generated during a BarlONT run or multiple runs. This directive structure allows for multiple run directives to be generated and initiated using different run parameters or samples. 
 
 <p>&nbsp;</p>
 
-## Running on SLURM
+## Running BarlONT
+
+1. Copy the BarlONT workflow folder to a directive designated 'barlont' (e.g. /snakemake/barlont)
+2. Copy the BarlONT config folder to a directive in the same path as the 'barlont' directive' (e.g. /snakemake/barlont_run/config)
+3. Fill in the path for (1) data, and (2) sample ids in the config file (e.g. /snakemake/barlont_run/config/config.yaml)
+4. Execute the BarlONT pipeline from the run directive (e.g. /snakemake/barlont_run)
+
+<p>&nbsp;</p>
+
+## Running BarlONT on SLURM
+
+BarlONT can easily be executed on a job scheduler such as SLURM, often used on HPC clusters.
 
 #### Install executor plugin for slurm (https://snakemake.github.io/snakemake-plugin-catalog/plugins/executor/slurm.html)
 ```
