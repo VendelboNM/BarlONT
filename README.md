@@ -6,18 +6,18 @@ BarlONT will generate a polished assembly, extensive QC reporting and both short
 
 ## Software requirements
 
-#### Conda =< 24.11.2
+#### [Conda =< 24.11.2](https://docs.conda.io/en/latest/)
 ```
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
 
-#### Snakemake =< 8.16.0
+#### [Snakemake =< 8.16.0](https://snakemake.readthedocs.io/en/stable/)
 ```
 conda install -c bioconda -c conda-forge snakemake
 ```
 
-#### FindGSE 
+#### [FindGSE](https://github.com/schneebergerlab/findGSE)
 ```
 # Download
 wget https://github.com/schneebergerlab/findGSE/archive/master.zip
@@ -52,20 +52,51 @@ The run directory (just a folder within the same directive as the barlont folder
 
 <p>&nbsp;</p>
 
-## Running BarlONT
+## Setting up and executing BarlONT
+Follow these steps to set up and execute the BarlONT pipeline:
 
-1. Copy the BarlONT workflow folder to a directive designated 'barlont' (e.g. /snakemake/barlont)
-2. Copy the BarlONT config folder to a directive in the same path as the 'barlont' directive' (e.g. /snakemake/barlont_run/config)
-3. Fill in the path for (1) data, and (2) sample ids in the config file (e.g. /snakemake/barlont_run/config/config.yaml)
-4. Execute the BarlONT pipeline from the run directive (e.g. /snakemake/barlont_run)
+#### Step 1: Clone the repository
+```
+git clone https://github.com/VendelboNM/BarlONT.git "$(pwd)/snakemake/barlont"
+```
 
+#### Step 2: Set up the workflow and configuration
+
+```
+# Create a run directive (e.g. barlont_run)
+mkdir /snakemake/barlont_run
+
+# Copy the config folder to the run directive
+cp -r /snakemake/barlont/config /snakemake/barlont_run
+```
+
+#### Step 3: Update the configuration
+Within /snakemake/barlont_run/config/config.yaml file edit the:   
+&nbsp;&nbsp;&nbsp;&nbsp; (1) Path for raw sequence data   
+&nbsp;&nbsp;&nbsp;&nbsp; (2) Sample ids
+
+#### Step 4: Execute BarlONT
+```
+snakemake \
+    --jobs {insert maximum number of parallel jobs} \
+    --snakefile ../barlont/workflow/ont_processing.smk \
+    --configfile config/config.yaml \
+    --software-deployment-method conda \
+    --use-conda \
+    --conda-prefix {path to conda directive} \
+    --printshellcmds \
+    --latency-wait 120 \
+    --keep-going \
+    --verbose \
+    --notemp
+```
 <p>&nbsp;</p>
 
 ## Running BarlONT on SLURM
 
-BarlONT can easily be executed on a job scheduler such as SLURM, often used on HPC clusters.
+BarlONT can be efficiently executed on SLURM, a widely used job scheduler for high-performance computing clusters. This allows for parallel execution, optimized resource management, and seamless integration with cluster environments.
 
-#### Install executor plugin for slurm (https://snakemake.github.io/snakemake-plugin-catalog/plugins/executor/slurm.html)
+#### Install [executor plugin for slurm](https://snakemake.github.io/snakemake-plugin-catalog/plugins/executor/slurm.html)
 ```
 pip install snakemake-executor-plugin-slurm
 ```
@@ -73,7 +104,7 @@ pip install snakemake-executor-plugin-slurm
 ```
 snakemake \
         --jobs {insert maximum number of parallel jobs} \
-        --snakefile {path to barlont snakefile} \
+        --snakefile ../barlont/workflow/ont_processing.smk \
         --configfile config/config.yaml \
         --software-deployment-method conda \
         --use-conda \
