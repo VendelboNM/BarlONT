@@ -1,4 +1,4 @@
-# Barlont Snakemake Workflow:
+# BarlONT Snakemake Workflow:
 
 A Snakemake pipeline for de novo hybrid assembly and structural variant calling in barley using Oxford Nanopore and Illumina reads.
 
