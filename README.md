@@ -45,10 +45,10 @@ BarlONT was developed using:
 ### BarlONT directive structure
 
 #### Pipeline directory: snakemake/barlont/workflow
-The pipeline directory contains the BarlONT snakemake pipeline such as rules, conda environments, scripts, etc. needed for running BarlONT. 
+&nbsp;&nbsp;&nbsp;&nbsp;The pipeline directory contains the BarlONT snakemake pipeline such as rules, conda environments, scripts, etc. needed for running BarlONT. 
 
 #### Run directory: snakemake/barlont_run
-The run directory (just a folder within the same directive as the barlont folder), contains the run output such as results, log and benchmark files generated during a BarlONT run or multiple runs. This directive structure allows for multiple run directives to be generated and initiated using different run parameters or samples. 
+&nbsp;&nbsp;&nbsp;&nbsp;The run directory (just a folder within the same directive as the barlont folder), contains the run output such as results, log and benchmark files generated during a BarlONT run or multiple runs. This directive structure allows for multiple run directives to be generated and initiated using different run parameters or samples. 
 
 <p>&nbsp;</p>
 
