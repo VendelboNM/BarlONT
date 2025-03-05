@@ -125,11 +125,6 @@ snakemake \
 
 
 
-
-
-
-
-
 <p>&nbsp;</p>
 
 ## Citation
@@ -137,6 +132,11 @@ snakemake \
 Please cite out paper at: 
 
 <p>&nbsp;</p>
+
+## Directed Acyclic Graph
+
+![BarlONT_dag](https://github.com/user-attachments/assets/533d3be3-de67-4e06-9c1b-2441e1822dfe)
+
 
 ## Funding
 
