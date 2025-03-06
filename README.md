@@ -6,13 +6,13 @@ BarlONT will generate a polished assembly, extensive QC reporting and both short
 
 ## Software requirements
 
-#### [Conda =< 24.11.2](https://docs.conda.io/en/latest/)
+#### [Conda <= 24.11.2](https://docs.conda.io/en/latest/)
 ```
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
 
-#### [Snakemake =< 8.16.0](https://snakemake.readthedocs.io/en/stable/)
+#### [Snakemake <= 8.16.0](https://snakemake.readthedocs.io/en/stable/)
 ```
 conda install -c bioconda -c conda-forge snakemake
 ```
