@@ -71,7 +71,7 @@ cp -r /snakemake/barlont/config /snakemake/barlont_run
 ```
 
 #### Step 3: Data directory structure & configuration
-Place the Nanopore long-read sequence data within a folder called 'ont' and short-read sequence data within a folder called 'illu' at a selected data directory
+Place the Nanopore long-read sequence data within a folder called 'ont' and the Illumina short-read sequence data within a folder called 'illu' at a selected data directory.
 
 Within /snakemake/barlont_run/config/config.yaml file edit the:   
 &nbsp;&nbsp;&nbsp;&nbsp; (1) Path for the 'ont' and 'illu' raw data folders
