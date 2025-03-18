@@ -17,18 +17,6 @@ bash Miniconda3-latest-Linux-x86_64.sh
 conda install -c bioconda -c conda-forge snakemake
 ```
 
-#### [FindGSE](https://github.com/schneebergerlab/findGSE)
-```
-# Download
-wget https://github.com/schneebergerlab/findGSE/archive/master.zip
-unzip master.zip
-tar -czvf findGSE-master.tar.gz findGSE-master/
-
-# Install
-R
-install.packages("findGSE-master.tar.gz")
-```
-
 ## Sequence data requirements
 
 BarlONT was developed using:
@@ -137,7 +125,7 @@ Please cite out paper at:
 
 ## Directed Acyclic Graph
 
-![BarlONT_dag](https://github.com/user-attachments/assets/533d3be3-de67-4e06-9c1b-2441e1822dfe)
+![BarlONT_dag](https://github.com/user-attachments/assets/28916e0c-cbf9-4c51-be5d-070e599c31db)
 
 
 ## Funding
