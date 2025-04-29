@@ -69,7 +69,7 @@ Within /snakemake/barlont_run/config/config.yaml file edit the:
 ```
 snakemake \
     --jobs {insert maximum number of parallel jobs} \
-    --snakefile ../barlont/workflow/ont_processing.smk \
+    --snakefile ../barlont/workflow/Snakefile \
     --configfile config/config.yaml \
     --software-deployment-method conda \
     --use-conda \
