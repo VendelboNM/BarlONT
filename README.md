@@ -111,12 +111,6 @@ snakemake \
 
 <p>&nbsp;</p>
 
-## Quick Tips
-
-
-
-<p>&nbsp;</p>
-
 ## Citation
 
 Please cite out paper at: 
