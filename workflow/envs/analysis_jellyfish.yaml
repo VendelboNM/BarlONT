@@ -1,0 +1,7 @@
+name: analysis_jellyfish
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  - kmer-jellyfish=2.3.1

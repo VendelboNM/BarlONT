@@ -1,0 +1,11 @@
+name: download_genomic_resources
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  - pggb
+  - samtools
+  - libdeflate
+  - htslib
+  - unzip

@@ -1,0 +1,9 @@
+name: 01_nanofilt
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  - numpy
+  - biopython
+  - nanofilt=2.8.0

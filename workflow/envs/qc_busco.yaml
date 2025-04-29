@@ -1,0 +1,11 @@
+name: qc_busco
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  - busco=5.6.1
+  - python=3.9.18
+  - numpy
+  - pandas
+ 

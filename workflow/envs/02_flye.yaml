@@ -1,0 +1,8 @@
+name: 02_flye
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  - flye=2.9.2
+  - python=3.9.5

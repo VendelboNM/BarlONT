@@ -1,0 +1,14 @@
+name: analysis_findgse
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - r-base=4.4.2
+  - r-pracma
+  - r-fgarch
+  - r-fbasics
+  - r-timeseries
+  - r-timedate
+  - r-devtools
+  - r-optparse
